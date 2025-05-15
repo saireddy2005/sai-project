@@ -1,0 +1,95 @@
+=== Cycle 1 ===
+
+--- 1st & Main ---
+North Queue: 3
+East Queue : 1
+Green Direction: NORTH for 10 seconds
+
+--- 2nd & Broad ---
+North Queue: 3
+East Queue : 1
+Green Direction: NORTH for 10 seconds
+
+=== Cycle 2 ===
+
+--- 1st & Main ---
+North Queue: 3
+East Queue : 2
+Green Direction: NORTH for 10 seconds
+
+--- 2nd & Broad ---
+North Queue: 5
+East Queue : 3
+Green Direction: NORTH for 10 seconds
+
+=== Cycle 3 ===
+
+--- 1st & Main ---
+North Queue: 2
+East Queue : 7
+Green Direction: EAST for 14 seconds
+
+--- 2nd & Broad ---
+North Queue: 2
+East Queue : 6
+Green Direction: EAST for 12 seconds
+
+=== Cycle 4 ===
+
+--- 1st & Main ---
+North Queue: 5
+East Queue : 4
+Green Direction: NORTH for 10 seconds
+
+--- 2nd & Broad ---
+North Queue: 7
+East Queue : 2
+Green Direction: NORTH for 14 seconds
+
+=== Cycle 5 ===
+
+--- 1st & Main ---
+North Queue: 2
+East Queue : 4
+Green Direction: EAST for 10 seconds
+
+--- 2nd & Broad ---
+North Queue: 3
+East Queue : 6
+Green Direction: EAST for 12 seconds
+
+=== Cycle 6 ===
+
+--- 1st & Main ---
+North Queue: 2
+East Queue : 2
+Green Direction: EAST for 10 seconds
+
+--- 2nd & Broad ---
+North Queue: 8
+East Queue : 1
+Green Direction: NORTH for 16 seconds
+
+=== Cycle 7 ===
+
+--- 1st & Main ---
+North Queue: 2
+East Queue : 0
+Green Direction: NORTH for 10 seconds
+
+--- 2nd & Broad ---
+North Queue: 0
+East Queue : 5
+Green Direction: EAST for 10 seconds
+
+=== Cycle 8 ===
+
+--- 1st & Main ---
+North Queue: 5
+East Queue : 5
+Green Direction: EAST for 10 seconds
+
+--- 2nd & Broad ---
+North Queue: 1
+East Queue : 1
+Green Direction: EAST for 10 seconds
