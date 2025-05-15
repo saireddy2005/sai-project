@@ -1,0 +1,57 @@
+import random
+import time
+
+class Intersection:
+    def __init__(self, name):
+        self.name = name
+        self.north_queue = 0
+        self.east_queue = 0
+        self.green_direction = 'north'  # start with north-south green
+        self.time_green = 10  # default green light time
+
+    def simulate_traffic(self):
+        # Randomly add cars to the queues
+        self.north_queue += random.randint(0, 5)
+        self.east_queue += random.randint(0, 5)
+
+    def optimize_light(self):
+        # Simple logic: longer green for heavier traffic
+        if self.north_queue > self.east_queue:
+            self.green_direction = 'north'
+            self.time_green = min(30, max(10, self.north_queue * 2))
+        else:
+            self.green_direction = 'east'
+            self.time_green = min(30, max(10, self.east_queue * 2))
+
+    def pass_traffic(self):
+        # Cars pass depending on green light
+        if self.green_direction == 'north':
+            passed = min(self.north_queue, self.time_green)
+            self.north_queue -= passed
+        else:
+            passed = min(self.east_queue, self.time_green)
+            self.east_queue -= passed
+
+    def display_status(self):
+        print(f"\n--- {self.name} ---")
+        print(f"North Queue: {self.north_queue}")
+        print(f"East Queue : {self.east_queue}")
+        print(f"Green Direction: {self.green_direction.upper()} for {self.time_green} seconds")
+
+def main():
+    intersections = [
+        Intersection("1st & Main"),
+        Intersection("2nd & Broad")
+    ]
+
+    for cycle in range(10):  # Run 10 cycles
+        print(f"\n=== Cycle {cycle + 1} ===")
+        for inter in intersections:
+            inter.simulate_traffic()
+            inter.optimize_light()
+            inter.display_status()
+            inter.pass_traffic()
+        time.sleep(1)
+
+if __name__ == "__main__":
+    main()
